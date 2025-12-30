@@ -4,6 +4,7 @@ let hasUnsavedChanges = false;
 let editingLevelIndex = null;
 let editingCopyIndex = null;
 let editingCopyParentIndex = null;
+let temporaryCopies = []; // Store copies while adding a new level
 let currentPage = 1;
 const itemsPerPage = 6;
 
@@ -148,26 +149,19 @@ function updateDownloadButton() {
 // Add new level
 function addLevel() {
     editingLevelIndex = null;
+    temporaryCopies = []; // Reset temporary copies
     document.getElementById('modalTitle').textContent = 'Add New Level';
     document.getElementById('levelForm').reset();
-    document.getElementById('copiesList').innerHTML = '';
+    updateCopiesListDisplay();
     document.getElementById('levelModal').style.display = 'flex';
 }
 
-// Edit existing level
-function editLevel(index) {
-    editingLevelIndex = index;
-    const level = levelsData[index];
-    
-    document.getElementById('modalTitle').textContent = 'Edit Level';
-    document.getElementById('levelId').value = level.id;
-    document.getElementById('levelName').value = level.name;
-    document.getElementById('levelCreator').value = level.creator;
-    document.getElementById('levelDescription').value = level.description || '';
-    
-    // Display copies
+// Update copies list display in the level modal
+function updateCopiesListDisplay() {
     const copiesList = document.getElementById('copiesList');
-    copiesList.innerHTML = level.copies.map((copy, copyIndex) => `
+    const copiesToDisplay = editingLevelIndex === null ? temporaryCopies : levelsData[editingLevelIndex].copies;
+    
+    copiesList.innerHTML = copiesToDisplay.map((copy, copyIndex) => `
         <div class="copy-item-editor">
             <div class="copy-item-info">
                 <div class="copy-item-name">${escapeHtml(copy.name)}</div>
@@ -179,6 +173,22 @@ function editLevel(index) {
             </div>
         </div>
     `).join('');
+}
+
+// Edit existing level
+function editLevel(index) {
+    editingLevelIndex = index;
+    temporaryCopies = []; // Clear temporary copies when editing existing level
+    const level = levelsData[index];
+    
+    document.getElementById('modalTitle').textContent = 'Edit Level';
+    document.getElementById('levelId').value = level.id;
+    document.getElementById('levelName').value = level.name;
+    document.getElementById('levelCreator').value = level.creator;
+    document.getElementById('levelDescription').value = level.description || '';
+    
+    // Display copies
+    updateCopiesListDisplay();
     
     document.getElementById('levelModal').style.display = 'flex';
 }
@@ -219,17 +229,41 @@ function editCopy(levelIndex, copyIndex) {
 
 // Edit copy from modal
 function editCopyFromModal(copyIndex) {
-    const level = levelsData[editingLevelIndex];
-    editCopy(editingLevelIndex, copyIndex);
-    document.getElementById('levelModal').style.display = 'none';
+    if (editingLevelIndex === null) {
+        // Editing temporary copy
+        editingCopyParentIndex = null; // Use null to indicate temporary copy
+        editingCopyIndex = copyIndex;
+        const copy = temporaryCopies[copyIndex];
+        
+        document.getElementById('copyModalTitle').textContent = 'Edit Copy';
+        document.getElementById('copyId').value = copy.id;
+        document.getElementById('copyName').value = copy.name;
+        document.getElementById('copyCreator').value = copy.creator;
+        document.getElementById('copyStatus').value = copy.status;
+        document.getElementById('copyReason').value = copy.reason || '';
+        document.getElementById('levelModal').style.display = 'none';
+        document.getElementById('copyModal').style.display = 'flex';
+    } else {
+        // Editing existing copy
+        const level = levelsData[editingLevelIndex];
+        editCopy(editingLevelIndex, copyIndex);
+        document.getElementById('levelModal').style.display = 'none';
+    }
 }
 
 // Remove copy from modal
 function removeCopyFromModal(copyIndex) {
     if (confirm('Remove this copy from the level?')) {
-        levelsData[editingLevelIndex].copies.splice(copyIndex, 1);
-        editLevel(editingLevelIndex); // Refresh the modal
-        markUnsaved();
+        if (editingLevelIndex === null) {
+            // Removing from temporary copies
+            temporaryCopies.splice(copyIndex, 1);
+            updateCopiesListDisplay();
+        } else {
+            // Removing from existing level
+            levelsData[editingLevelIndex].copies.splice(copyIndex, 1);
+            editLevel(editingLevelIndex); // Refresh the modal
+            markUnsaved();
+        }
     }
 }
 
@@ -252,7 +286,7 @@ document.getElementById('levelForm').addEventListener('submit', (e) => {
         name: document.getElementById('levelName').value.trim(),
         creator: document.getElementById('levelCreator').value.trim(),
         description: document.getElementById('levelDescription').value.trim() || undefined,
-        copies: levelsData[editingLevelIndex]?.copies || []
+        copies: editingLevelIndex === null ? temporaryCopies : (levelsData[editingLevelIndex]?.copies || [])
     };
     
     // Validate ID uniqueness
@@ -275,6 +309,9 @@ document.getElementById('levelForm').addEventListener('submit', (e) => {
     // Sort by ID
     levelsData.sort((a, b) => a.id - b.id);
     
+    // Clear temporary copies
+    temporaryCopies = [];
+    
     markUnsaved();
     // Refresh filtered levels and display
     const searchInput = document.getElementById('searchInput');
@@ -294,18 +331,31 @@ document.getElementById('copyForm').addEventListener('submit', (e) => {
         reason: document.getElementById('copyReason').value.trim() || undefined
     };
     
-    if (editingCopyIndex === null) {
-        // Add new copy
-        if (!levelsData[editingCopyParentIndex].copies) {
-            levelsData[editingCopyParentIndex].copies = [];
+    if (editingCopyParentIndex === null) {
+        // Adding/editing temporary copy (while creating new level)
+        if (editingCopyIndex === null) {
+            // Add new temporary copy
+            temporaryCopies.push(copyData);
+        } else {
+            // Edit existing temporary copy
+            temporaryCopies[editingCopyIndex] = copyData;
         }
-        levelsData[editingCopyParentIndex].copies.push(copyData);
+        updateCopiesListDisplay();
     } else {
-        // Edit existing copy
-        levelsData[editingCopyParentIndex].copies[editingCopyIndex] = copyData;
+        // Adding/editing copy to existing level
+        if (editingCopyIndex === null) {
+            // Add new copy
+            if (!levelsData[editingCopyParentIndex].copies) {
+                levelsData[editingCopyParentIndex].copies = [];
+            }
+            levelsData[editingCopyParentIndex].copies.push(copyData);
+        } else {
+            // Edit existing copy
+            levelsData[editingCopyParentIndex].copies[editingCopyIndex] = copyData;
+        }
+        markUnsaved();
     }
     
-    markUnsaved();
     // Refresh filtered levels and display
     const searchInput = document.getElementById('searchInput');
     searchLevels(searchInput ? searchInput.value : '');
@@ -314,6 +364,9 @@ document.getElementById('copyForm').addEventListener('submit', (e) => {
     // If we were editing a level, reopen it
     if (editingLevelIndex !== null) {
         setTimeout(() => editLevel(editingLevelIndex), 100);
+    } else {
+        // If we were adding a new level, reopen the level modal
+        document.getElementById('levelModal').style.display = 'flex';
     }
 });
 
@@ -321,6 +374,7 @@ document.getElementById('copyForm').addEventListener('submit', (e) => {
 function closeLevelModal() {
     document.getElementById('levelModal').style.display = 'none';
     editingLevelIndex = null;
+    temporaryCopies = []; // Clear temporary copies when closing modal
 }
 
 function closeCopyModal() {
@@ -537,11 +591,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Add copy button in level modal
     document.getElementById('addCopyBtn').addEventListener('click', () => {
-        if (editingLevelIndex === null) {
-            alert('Please save the level first before adding copies.');
-            return;
-        }
-        editingCopyParentIndex = editingLevelIndex;
+        editingCopyParentIndex = editingLevelIndex; // null if adding new level, index if editing
         editingCopyIndex = null;
         document.getElementById('copyModalTitle').textContent = 'Add New Copy';
         document.getElementById('copyForm').reset();
