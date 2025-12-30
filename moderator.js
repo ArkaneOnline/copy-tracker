@@ -10,7 +10,7 @@ const itemsPerPage = 6;
 // Load JSON data
 async function loadLevelsData() {
     try {
-        const response = await fetch('levels.json');
+        const response = await fetch('levels.json', { cache: 'no-store' });
         if (!response.ok) {
             throw new Error('Failed to load levels data');
         }

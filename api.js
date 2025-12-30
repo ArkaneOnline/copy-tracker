@@ -25,7 +25,7 @@ class GDLevelAPI {
         }
 
         try {
-            const response = await fetch(`${this.baseUrl}levels.json`);
+            const response = await fetch(`${this.baseUrl}levels.json`, { cache: 'no-store' });
             if (!response.ok) {
                 throw new Error(`Failed to load levels: ${response.status}`);
             }
