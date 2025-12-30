@@ -106,7 +106,7 @@ function createLevelCard(level) {
             <div class="copies-section">
                 <div class="copies-header">Copies:</div>
                 <div class="copies-list">
-                    ${copiesList}
+                    ${copiesList || '<div class="no-copies-message">No copies found for this level</div>'}
                 </div>
             </div>
         </div>
