@@ -358,4 +358,35 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initial check after page loads
     setTimeout(() => handleScroll(), 300);
+    
+    // Handle tooltip clicks on mobile (for touch devices)
+    document.addEventListener('click', (e) => {
+        const tooltipElement = e.target.closest('.copy-status.has-tooltip');
+        if (tooltipElement) {
+            // Check if we're on a touch device
+            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            if (isTouchDevice) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // Toggle tooltip visibility
+                const isActive = tooltipElement.classList.contains('tooltip-active');
+                
+                // Close all other tooltips
+                document.querySelectorAll('.copy-status.has-tooltip').forEach(el => {
+                    el.classList.remove('tooltip-active');
+                });
+                
+                // Toggle current tooltip
+                if (!isActive) {
+                    tooltipElement.classList.add('tooltip-active');
+                }
+            }
+        } else {
+            // Close all tooltips when clicking elsewhere
+            document.querySelectorAll('.copy-status.has-tooltip').forEach(el => {
+                el.classList.remove('tooltip-active');
+            });
+        }
+    });
 });
