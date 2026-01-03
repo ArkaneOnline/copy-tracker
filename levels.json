@@ -12,6 +12,18 @@
     "copies": []
   },
   {
+    "id": 33498127,
+    "name": "SARY NEVER CLEAR",
+    "creator": "Kugelblitz",
+    "copies": []
+  },
+  {
+    "id": 45866767,
+    "name": "Crimson Planet",
+    "creator": "TrueOmega",
+    "copies": []
+  },
+  {
     "id": 49896559,
     "name": "Abyss of Darkness",
     "creator": "Exen",
@@ -28,8 +40,46 @@
         "creator": "Pointercrate",
         "status": "rejected",
         "reason": "LDM is too strong for modern standards. Additionally, this version does not contain 2.2 fixes."
+      },
+      {
+        "id": 117313806,
+        "name": "Zodiac ldm",
+        "creator": "CaveMelv",
+        "status": "approved"
       }
     ]
+  },
+  {
+    "id": 54953085,
+    "name": "Thinking Space",
+    "creator": "Atomic",
+    "copies": []
+  },
+  {
+    "id": 57600307,
+    "name": "Cognition",
+    "creator": "Endlevel",
+    "copies": []
+  },
+  {
+    "id": 58161496,
+    "name": "Renevant",
+    "creator": "nikroplays",
+    "copies": [
+      {
+        "id": 88608143,
+        "name": "Renevant LDM StartPo",
+        "creator": "thegreatkala",
+        "status": "approved",
+        "reason": "Contains 2.2 fixes."
+      }
+    ]
+  },
+  {
+    "id": 58355141,
+    "name": "Calculator Core",
+    "creator": "Walroose",
+    "copies": []
   },
   {
     "id": 58673581,
@@ -47,12 +97,25 @@
     "id": 60978746,
     "name": "The Golden",
     "creator": "BoBoBoBoBoBoBo",
-    "copies": []
+    "copies": [
+      {
+        "id": 70019015,
+        "name": "The Golden LDM HEX",
+        "creator": "swiborg",
+        "status": "approved"
+      }
+    ]
   },
   {
     "id": 62556400,
     "name": "Codependence",
     "creator": "TCTeam",
+    "copies": []
+  },
+  {
+    "id": 63996127,
+    "name": "Cold Sweat",
+    "creator": "para",
     "copies": []
   },
   {
@@ -62,10 +125,29 @@
     "copies": []
   },
   {
+    "id": 69289606,
+    "name": "Widestep",
+    "creator": "Demishio",
+    "copies": []
+  },
+  {
+    "id": 69333212,
+    "name": "Promethean",
+    "creator": "Endlevel",
+    "copies": []
+  },
+  {
     "id": 69685815,
     "name": "Sonic Wave Infinity",
     "creator": "APTeamOfficial",
-    "copies": []
+    "copies": [
+      {
+        "id": 117439690,
+        "name": "SWI LDM STA",
+        "creator": "TheRealJevan",
+        "status": "approved"
+      }
+    ]
   },
   {
     "id": 71025973,
@@ -86,15 +168,33 @@
     "copies": []
   },
   {
+    "id": 71912451,
+    "name": "RUST",
+    "creator": "neigefeu",
+    "copies": []
+  },
+  {
     "id": 72315402,
     "name": "arcturus",
     "creator": "Maxfs",
     "copies": []
   },
   {
+    "id": 72744364,
+    "name": "Hard Machine",
+    "creator": "Komp",
+    "copies": []
+  },
+  {
     "id": 73667628,
     "name": "Acheron",
     "creator": "ryamu",
+    "copies": []
+  },
+  {
+    "id": 74391640,
+    "name": "Keres",
+    "creator": "ItsHybrid",
     "copies": []
   },
   {
@@ -110,6 +210,18 @@
     "copies": []
   },
   {
+    "id": 75813671,
+    "name": "Lotus Flower",
+    "creator": "StarkytheSalad",
+    "copies": []
+  },
+  {
+    "id": 76159410,
+    "name": "Cosmic Cyclone",
+    "creator": "APTeamOfficial",
+    "copies": []
+  },
+  {
     "id": 76543324,
     "name": "Verdant Landscape",
     "creator": "Nisha",
@@ -122,9 +234,21 @@
     "copies": []
   },
   {
+    "id": 78435955,
+    "name": "Esfera",
+    "creator": "SyQual",
+    "copies": []
+  },
+  {
     "id": 79771070,
     "name": "Aeiral Gleam",
     "creator": "Endlevel",
+    "copies": []
+  },
+  {
+    "id": 80178903,
+    "name": "Call Me Maybe",
+    "creator": "hawkyre",
     "copies": []
   },
   {
@@ -143,6 +267,12 @@
     "id": 81139702,
     "name": "The Hallucination",
     "creator": "SyQual",
+    "copies": []
+  },
+  {
+    "id": 81721025,
+    "name": "qoUEO",
+    "creator": "GhostVandalf",
     "copies": []
   },
   {
@@ -197,6 +327,19 @@
     "id": 87665224,
     "name": "KOCMOC",
     "creator": "cherryteam",
+    "copies": [
+      {
+        "id": 107300956,
+        "name": "KOCMOC LDM SP",
+        "creator": "Serpentical",
+        "status": "approved"
+      }
+    ]
+  },
+  {
+    "id": 88136707,
+    "name": "Sky Shredder",
+    "creator": "Dorvict",
     "copies": []
   },
   {
@@ -206,9 +349,27 @@
     "copies": []
   },
   {
+    "id": 88233955,
+    "name": "DIRECTIONS",
+    "creator": "wokecat",
+    "copies": []
+  },
+  {
     "id": 88442157,
     "name": "Critical Heat",
     "creator": "Zeniux",
+    "copies": []
+  },
+  {
+    "id": 88611404,
+    "name": "NEUTRA",
+    "creator": "Jenkins GD",
+    "copies": []
+  },
+  {
+    "id": 88822041,
+    "name": "Neon Skyline",
+    "creator": "recillia",
     "copies": []
   },
   {
@@ -236,6 +397,12 @@
     "copies": []
   },
   {
+    "id": 90104288,
+    "name": "We Are Not The Same",
+    "creator": "mbed",
+    "copies": []
+  },
+  {
     "id": 90390075,
     "name": "Solar Flare",
     "creator": "Linear",
@@ -248,15 +415,39 @@
     "copies": []
   },
   {
+    "id": 90597202,
+    "name": "CORRODERE",
+    "creator": "Moosh",
+    "copies": []
+  },
+  {
+    "id": 91180835,
+    "name": "ATOMIC CANNON Mk II",
+    "creator": "Lieb",
+    "copies": []
+  },
+  {
     "id": 91351939,
     "name": "Tunnel of Despair",
     "creator": "Exen",
     "copies": []
   },
   {
+    "id": 92538968,
+    "name": "Instinct",
+    "creator": "Krazyman50",
+    "copies": []
+  },
+  {
     "id": 93091893,
     "name": "Deimos",
     "creator": "ItsHybrid",
+    "copies": []
+  },
+  {
+    "id": 93155813,
+    "name": "Rigel",
+    "creator": "Dan2D",
     "copies": []
   },
   {
@@ -296,9 +487,21 @@
     "copies": []
   },
   {
+    "id": 94156085,
+    "name": "shimmer",
+    "creator": "Amplitron",
+    "copies": []
+  },
+  {
     "id": 94359172,
     "name": "COMBUSTION",
     "creator": "Cersia",
+    "copies": []
+  },
+  {
+    "id": 94578424,
+    "name": "Trotil",
+    "creator": "cherryteam",
     "copies": []
   },
   {
@@ -326,6 +529,18 @@
     "copies": []
   },
   {
+    "id": 95524621,
+    "name": "Crackhead Circles",
+    "creator": "AlrexX",
+    "copies": []
+  },
+  {
+    "id": 95767653,
+    "name": "Frost Spirit",
+    "creator": "Quaybus",
+    "copies": []
+  },
+  {
     "id": 95851008,
     "name": "Eyes in the Water",
     "creator": "hawkyre",
@@ -338,6 +553,12 @@
     "copies": []
   },
   {
+    "id": 96035641,
+    "name": "Scream Machine",
+    "creator": "TMco",
+    "copies": []
+  },
+  {
     "id": 96083028,
     "name": "Midnight",
     "creator": "Madison Yuko",
@@ -347,6 +568,18 @@
     "id": 96314787,
     "name": "Deadlier Clubstep",
     "creator": "HeroZombie80",
+    "copies": []
+  },
+  {
+    "id": 96471171,
+    "name": "ConClusion",
+    "creator": "DreamZoneGD",
+    "copies": []
+  },
+  {
+    "id": 97364686,
+    "name": "Lithium",
+    "creator": "L4tezk",
     "copies": []
   },
   {
@@ -380,15 +613,33 @@
     "copies": []
   },
   {
+    "id": 105625871,
+    "name": "Guideless Goobering",
+    "creator": "Enfur",
+    "copies": []
+  },
+  {
     "id": 105748155,
     "name": "Checked Steam",
     "creator": "gruzy",
     "copies": []
   },
   {
+    "id": 106522770,
+    "name": "Dry Out Copyable 2",
+    "creator": "tenzk",
+    "copies": []
+  },
+  {
     "id": 107238250,
     "name": "Viprin UFO",
     "creator": "hawkyre",
+    "copies": []
+  },
+  {
+    "id": 107299600,
+    "name": "Axinie",
+    "creator": "SaturMan",
     "copies": []
   },
   {
@@ -401,6 +652,12 @@
     "id": 107805281,
     "name": "Menace",
     "creator": "Arraegen",
+    "copies": []
+  },
+  {
+    "id": 108141323,
+    "name": "DISSONANCE",
+    "creator": "ivyteal",
     "copies": []
   },
   {
@@ -428,6 +685,12 @@
     "copies": []
   },
   {
+    "id": 110038200,
+    "name": "Gloxinia",
+    "creator": "solarion",
+    "copies": []
+  },
+  {
     "id": 110500920,
     "name": "The Yangire",
     "creator": "Dorami",
@@ -452,9 +715,47 @@
     "copies": []
   },
   {
+    "id": 110913375,
+    "name": "Judgement Knights",
+    "creator": "HangerLord",
+    "copies": []
+  },
+  {
     "id": 110991117,
     "name": "Waterfall",
     "creator": "cherryteam",
+    "copies": [
+      {
+        "id": 111612084,
+        "name": "Waterfall ldm",
+        "creator": "sparkyconjure",
+        "status": "approved"
+      },
+      {
+        "id": 115746159,
+        "name": "Waterfall ldm",
+        "creator": "BBGameGuru",
+        "status": "approved",
+        "reason": "Same as the \"sparkyconjure\" ldm, but with 14% to 23% optimized."
+      }
+    ]
+  },
+  {
+    "id": 111193316,
+    "name": "Scrubbabingo force",
+    "creator": "Akunakunn",
+    "copies": []
+  },
+  {
+    "id": 112046512,
+    "name": "Ascent",
+    "creator": "Rimexon",
+    "copies": []
+  },
+  {
+    "id": 112231282,
+    "name": "Swing Swing",
+    "creator": "Kaza",
     "copies": []
   },
   {
@@ -467,6 +768,12 @@
     "id": 112313819,
     "name": "Anathema",
     "creator": "nikroplays",
+    "copies": []
+  },
+  {
+    "id": 112586799,
+    "name": "Indivine",
+    "creator": "MercuryDT",
     "copies": []
   },
   {
@@ -536,6 +843,12 @@
     "copies": []
   },
   {
+    "id": 115151904,
+    "name": "ta1LSD0ll",
+    "creator": "ta1lsdoll⁩",
+    "copies": []
+  },
+  {
     "id": 115380769,
     "name": "Starlit Stroll",
     "creator": "Enfur",
@@ -545,6 +858,12 @@
     "id": 116174063,
     "name": "Every End",
     "creator": "MindCap",
+    "copies": []
+  },
+  {
+    "id": 118664383,
+    "name": "Disconnected Descent",
+    "creator": "TheSkeletonGMD",
     "copies": []
   },
   {
@@ -572,15 +891,39 @@
     "copies": []
   },
   {
+    "id": 120060187,
+    "name": "azure blast",
+    "creator": "AlbinoSnail",
+    "copies": []
+  },
+  {
     "id": 120255728,
     "name": "Sevvend Clubstep",
     "creator": "cherryteam",
     "copies": []
   },
   {
+    "id": 122389640,
+    "name": "in this",
+    "creator": "enci",
+    "copies": []
+  },
+  {
     "id": 122941596,
     "name": "THE JET ENGINE",
     "creator": "Billzer",
+    "copies": []
+  },
+  {
+    "id": 123853954,
+    "name": "IRIS",
+    "creator": "Kaza",
+    "copies": []
+  },
+  {
+    "id": 125617849,
+    "name": "Dark Dimension",
+    "creator": "ThePurgatory",
     "copies": []
   },
   {
