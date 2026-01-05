@@ -68,10 +68,11 @@ function createLevelCard(level) {
         const statusIcon = copy.status === 'approved' ? '✓' : copy.status === 'pending' ? '⏳' : '✗';
         const copyName = copy.name ? escapeHtml(copy.name) : 'Unnamed Copy';
         const hasReason = copy.reason && copy.reason.trim();
-        const tooltipAttr = hasReason ? `data-tooltip="${escapeHtml(copy.reason)}"` : '';
+        const tooltipAttr = hasReason ? `data-tooltip="${escapeHtmlAttr(copy.reason)}"` : '';
+        const tooltipClass = hasReason ? 'has-tooltip' : '';
         
         return `
-            <div class="copy-item">
+            <div class="copy-item ${tooltipClass}" ${tooltipAttr}>
                 <div class="copy-info">
                     <div class="copy-name">${copyName}</div>
                     <div class="copy-meta">
@@ -79,7 +80,7 @@ function createLevelCard(level) {
                         <span class="copy-creator">by ${escapeHtml(copy.creator)}</span>
                     </div>
                 </div>
-                <span class="copy-status ${statusClass} ${hasReason ? 'has-tooltip' : ''}" ${tooltipAttr}>
+                <span class="copy-status ${statusClass}">
                     <span class="status-icon">${statusIcon}</span>
                     <span class="status-text">${copy.status}</span>
                 </span>
@@ -118,6 +119,13 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+// Escape HTML for use in attributes (handles quotes)
+function escapeHtmlAttr(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML.replace(/"/g, '&quot;');
 }
 
 // Search functionality
@@ -361,7 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Handle tooltip clicks on mobile (for touch devices)
     document.addEventListener('click', (e) => {
-        const tooltipElement = e.target.closest('.copy-status.has-tooltip');
+        const tooltipElement = e.target.closest('.copy-item.has-tooltip');
         if (tooltipElement) {
             // Check if we're on a touch device
             const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -373,7 +381,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const isActive = tooltipElement.classList.contains('tooltip-active');
                 
                 // Close all other tooltips
-                document.querySelectorAll('.copy-status.has-tooltip').forEach(el => {
+                document.querySelectorAll('.copy-item.has-tooltip').forEach(el => {
                     el.classList.remove('tooltip-active');
                 });
                 
@@ -384,7 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } else {
             // Close all tooltips when clicking elsewhere
-            document.querySelectorAll('.copy-status.has-tooltip').forEach(el => {
+            document.querySelectorAll('.copy-item.has-tooltip').forEach(el => {
                 el.classList.remove('tooltip-active');
             });
         }
