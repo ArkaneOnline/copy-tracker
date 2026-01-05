@@ -159,7 +159,14 @@
     "id": 71434979,
     "name": "Trueffet",
     "creator": "SyQual",
-    "copies": []
+    "copies": [
+      {
+        "id": 80352859,
+        "name": "Trueffet LDM mine",
+        "creator": "zZoink",
+        "status": "approved"
+      }
+    ]
   },
   {
     "id": 71885708,
@@ -406,7 +413,14 @@
     "id": 90390075,
     "name": "Solar Flare",
     "creator": "Linear",
-    "copies": []
+    "copies": [
+      {
+        "id": 90492731,
+        "name": "Solar Flare LDM",
+        "creator": "zZoink",
+        "status": "approved"
+      }
+    ]
   },
   {
     "id": 90477539,
@@ -544,7 +558,14 @@
     "id": 95851008,
     "name": "Eyes in the Water",
     "creator": "hawkyre",
-    "copies": []
+    "copies": [
+      {
+        "id": 127044298,
+        "name": "eitw ldm",
+        "creator": "RubenChuGD",
+        "status": "approved"
+      }
+    ]
   },
   {
     "id": 95998005,
@@ -718,7 +739,22 @@
     "id": 110913375,
     "name": "Judgement Knights",
     "creator": "HangerLord",
-    "copies": []
+    "copies": [
+      {
+        "id": 115482583,
+        "name": "Judgement Knights sp",
+        "creator": "PaltaDash",
+        "status": "approved",
+        "reason": "LDM"
+      },
+      {
+        "id": 125871235,
+        "name": "Judgement Knights pa",
+        "creator": "peetoo",
+        "status": "approved",
+        "reason": "PaltaDash LDM with a few removed details"
+      }
+    ]
   },
   {
     "id": 110991117,
@@ -822,7 +858,14 @@
     "id": 114283297,
     "name": "andromeda",
     "creator": "Insxne97",
-    "copies": []
+    "copies": [
+      {
+        "id": 126403376,
+        "name": "andromeda ldm",
+        "creator": "Serpentical",
+        "status": "approved"
+      }
+    ]
   },
   {
     "id": 114530859,
