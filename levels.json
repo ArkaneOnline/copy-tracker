@@ -903,7 +903,14 @@
         "name": "Ascent ldm",
         "creator": "neutraa",
         "status": "rejected",
-        "reason": "Removes screen obstruction at 32%, removes excessive glow & details between 50-54%."
+        "reason": "Removes blinding flash at 10%, removes screen obstruction at 32%, removes excessive glow & details between 50-54%."
+      },
+      {
+        "id": 113129276,
+        "name": "ascent SP uldm",
+        "creator": "geisis",
+        "status": "rejected",
+        "reason": "Removes excessive detail in predrop, removes 10% flash, removes \"ASCENT\" text at 22%, removes screen obstruction at 30%, removes excessive detail from 50-54"
       }
     ]
   },
