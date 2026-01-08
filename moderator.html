@@ -132,6 +132,23 @@
                         <label for="copyReason">Reason</label>
                         <textarea id="copyReason" rows="3"></textarea>
                     </div>
+                    <div class="form-group">
+                        <label>Tags</label>
+                        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                            <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                                <input type="checkbox" id="copyTagLDM" value="LDM">
+                                <span>LDM</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                                <input type="checkbox" id="copyTagBugfix" value="Bugfix">
+                                <span>Bugfix</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                                <input type="checkbox" id="copyTagStartPos" value="StartPos">
+                                <span>StartPos</span>
+                            </label>
+                        </div>
+                    </div>
                     <div class="modal-actions">
                         <button type="button" class="btn btn-secondary" id="cancelCopyBtn">Cancel</button>
                         <button type="submit" class="btn btn-primary">Save Copy</button>

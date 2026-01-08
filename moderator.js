@@ -73,20 +73,29 @@ function createLevelCard(level, index) {
     const pendingCount = level.copies.filter(c => c.status === 'pending').length;
     const rejectedCount = level.copies.filter(c => c.status === 'rejected').length;
     
-    const copiesHtml = level.copies.map((copy, copyIndex) => `
+    const copiesHtml = level.copies.map((copy, copyIndex) => {
+        const tags = copy.tags || [];
+        const tagsHtml = tags.length > 0 ? `
+            <div class="copy-tags" style="margin-top: 6px;">
+                ${tags.map(tag => `<span class="copy-tag copy-tag-${tag.toLowerCase()}">${escapeHtml(tag)}</span>`).join('')}
+            </div>
+        ` : '';
+        return `
         <div class="copy-card-editor">
             <div class="copy-name-editor">${escapeHtml(copy.name)}</div>
             <div class="copy-meta-editor">
                 ID: ${escapeHtml(copy.id.toString())} | by ${escapeHtml(copy.creator)}
             </div>
             <span class="copy-status-badge copy-status-${copy.status}">${copy.status}</span>
+            ${tagsHtml}
             ${copy.reason ? `<div style="font-size: 0.8rem; color: #999; margin-top: 6px;">${escapeHtml(copy.reason)}</div>` : ''}
             <div class="copy-actions">
                 <button class="btn btn-small btn-secondary" onclick="editCopy(${index}, ${copyIndex})">Edit</button>
                 <button class="btn btn-small btn-danger" onclick="deleteCopy(${index}, ${copyIndex})">Delete</button>
             </div>
         </div>
-    `).join('');
+    `;
+    }).join('');
     
     return `
         <div class="level-card-editor">
@@ -161,18 +170,27 @@ function updateCopiesListDisplay() {
     const copiesList = document.getElementById('copiesList');
     const copiesToDisplay = editingLevelIndex === null ? temporaryCopies : levelsData[editingLevelIndex].copies;
     
-    copiesList.innerHTML = copiesToDisplay.map((copy, copyIndex) => `
+    copiesList.innerHTML = copiesToDisplay.map((copy, copyIndex) => {
+        const tags = copy.tags || [];
+        const tagsHtml = tags.length > 0 ? `
+            <div class="copy-tags" style="margin-top: 6px;">
+                ${tags.map(tag => `<span class="copy-tag copy-tag-${tag.toLowerCase()}">${escapeHtml(tag)}</span>`).join('')}
+            </div>
+        ` : '';
+        return `
         <div class="copy-item-editor">
             <div class="copy-item-info">
                 <div class="copy-item-name">${escapeHtml(copy.name)}</div>
                 <div class="copy-item-meta">ID: ${escapeHtml(copy.id.toString())} | ${escapeHtml(copy.creator)} | ${copy.status}</div>
+                ${tagsHtml}
             </div>
             <div class="copy-item-actions">
                 <button class="btn btn-small btn-secondary" onclick="editCopyFromModal(${copyIndex})">Edit</button>
                 <button class="btn btn-small btn-danger" onclick="removeCopyFromModal(${copyIndex})">Remove</button>
             </div>
         </div>
-    `).join('');
+    `;
+    }).join('');
 }
 
 // Edit existing level
@@ -209,6 +227,10 @@ function addCopy(levelIndex) {
     editingCopyIndex = null;
     document.getElementById('copyModalTitle').textContent = 'Add New Copy';
     document.getElementById('copyForm').reset();
+    // Reset tags checkboxes
+    document.getElementById('copyTagLDM').checked = false;
+    document.getElementById('copyTagBugfix').checked = false;
+    document.getElementById('copyTagStartPos').checked = false;
     document.getElementById('copyModal').style.display = 'flex';
 }
 
@@ -224,6 +246,13 @@ function editCopy(levelIndex, copyIndex) {
     document.getElementById('copyCreator').value = copy.creator;
     document.getElementById('copyStatus').value = copy.status;
     document.getElementById('copyReason').value = copy.reason || '';
+    
+    // Set tags checkboxes
+    const tags = copy.tags || [];
+    document.getElementById('copyTagLDM').checked = tags.includes('LDM');
+    document.getElementById('copyTagBugfix').checked = tags.includes('Bugfix');
+    document.getElementById('copyTagStartPos').checked = tags.includes('StartPos');
+    
     document.getElementById('copyModal').style.display = 'flex';
 }
 
@@ -241,6 +270,13 @@ function editCopyFromModal(copyIndex) {
         document.getElementById('copyCreator').value = copy.creator;
         document.getElementById('copyStatus').value = copy.status;
         document.getElementById('copyReason').value = copy.reason || '';
+        
+        // Set tags checkboxes
+        const tags = copy.tags || [];
+        document.getElementById('copyTagLDM').checked = tags.includes('LDM');
+        document.getElementById('copyTagBugfix').checked = tags.includes('Bugfix');
+        document.getElementById('copyTagStartPos').checked = tags.includes('StartPos');
+        
         document.getElementById('levelModal').style.display = 'none';
         document.getElementById('copyModal').style.display = 'flex';
     } else {
@@ -323,12 +359,25 @@ document.getElementById('levelForm').addEventListener('submit', (e) => {
 document.getElementById('copyForm').addEventListener('submit', (e) => {
     e.preventDefault();
     
+    // Collect tags
+    const tags = [];
+    if (document.getElementById('copyTagLDM').checked) tags.push('LDM');
+    if (document.getElementById('copyTagBugfix').checked) tags.push('Bugfix');
+    if (document.getElementById('copyTagStartPos').checked) tags.push('StartPos');
+    
+    // Validate that at least one tag is selected
+    if (tags.length === 0) {
+        alert('Please select at least one tag (LDM, Bugfix, or StartPos).');
+        return;
+    }
+    
     const copyData = {
         id: parseInt(document.getElementById('copyId').value),
         name: document.getElementById('copyName').value.trim(),
         creator: document.getElementById('copyCreator').value.trim(),
         status: document.getElementById('copyStatus').value,
-        reason: document.getElementById('copyReason').value.trim() || undefined
+        reason: document.getElementById('copyReason').value.trim() || undefined,
+        tags: tags.length > 0 ? tags : undefined
     };
     
     if (editingCopyParentIndex === null) {
@@ -359,14 +408,16 @@ document.getElementById('copyForm').addEventListener('submit', (e) => {
     // Refresh filtered levels and display
     const searchInput = document.getElementById('searchInput');
     searchLevels(searchInput ? searchInput.value : '');
+    
+    // Store editingLevelIndex before closing modal (since closeCopyModal clears editingCopyParentIndex)
+    const wasEditingLevel = editingLevelIndex !== null;
+    const levelIndexToReopen = editingLevelIndex;
+    
     closeCopyModal();
     
-    // If we were editing a level, reopen it
-    if (editingLevelIndex !== null) {
-        setTimeout(() => editLevel(editingLevelIndex), 100);
-    } else {
-        // If we were adding a new level, reopen the level modal
-        document.getElementById('levelModal').style.display = 'flex';
+    // If we were editing a level, reopen it after a short delay
+    if (wasEditingLevel && levelIndexToReopen !== null) {
+        setTimeout(() => editLevel(levelIndexToReopen), 100);
     }
 });
 
@@ -601,6 +652,9 @@ document.addEventListener('DOMContentLoaded', () => {
         editingCopyIndex = null;
         document.getElementById('copyModalTitle').textContent = 'Add New Copy';
         document.getElementById('copyForm').reset();
+        // Reset tags checkboxes
+        document.getElementById('copyTagLDM').checked = false;
+        document.getElementById('copyTagBugfix').checked = false;
         document.getElementById('levelModal').style.display = 'none';
         document.getElementById('copyModal').style.display = 'flex';
     });

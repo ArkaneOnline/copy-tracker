@@ -70,6 +70,12 @@ function createLevelCard(level) {
         const hasReason = copy.reason && copy.reason.trim();
         const tooltipAttr = hasReason ? `data-tooltip="${escapeHtmlAttr(copy.reason)}"` : '';
         const tooltipClass = hasReason ? 'has-tooltip' : '';
+        const tags = copy.tags || [];
+        const tagsHtml = tags.length > 0 ? `
+            <div class="copy-tags">
+                ${tags.map(tag => `<span class="copy-tag copy-tag-${tag.toLowerCase()}">${escapeHtml(tag)}</span>`).join('')}
+            </div>
+        ` : '';
         
         return `
             <div class="copy-item ${tooltipClass}" ${tooltipAttr}>
@@ -79,6 +85,7 @@ function createLevelCard(level) {
                         <span class="copy-id">ID: ${escapeHtml(copy.id.toString())}</span>
                         <span class="copy-creator">by ${escapeHtml(copy.creator)}</span>
                     </div>
+                    ${tagsHtml}
                 </div>
                 <span class="copy-status ${statusClass}">
                     <span class="status-icon">${statusIcon}</span>
