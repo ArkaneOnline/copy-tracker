@@ -50,7 +50,6 @@
         "name": "Zodiac LDM",
         "creator": "Pointercrate",
         "status": "approved",
-        "reason": "LDM",
         "tags": [
           "LDM"
         ]
@@ -60,7 +59,6 @@
         "name": "Zodiac ldm",
         "creator": "CaveMelv",
         "status": "approved",
-        "reason": "LDM + 2.2 bugfix",
         "tags": [
           "LDM",
           "Bugfix"
@@ -90,10 +88,10 @@
         "name": "Renevant LDM StartPo",
         "creator": "thegreatkala",
         "status": "approved",
-        "reason": "LDM + 2.2 bugfix",
         "tags": [
           "LDM",
-          "Bugfix"
+          "Bugfix",
+          "StartPos"
         ]
       },
       {
@@ -101,10 +99,8 @@
         "name": "Renevant ldm",
         "creator": "Spaceuk",
         "status": "approved",
-        "reason": "LDM - No 2.2 bugfix",
         "tags": [
-          "LDM",
-          "Bugfix"
+          "LDM"
         ]
       },
       {
@@ -112,7 +108,6 @@
         "name": "Renevant LDM BUGFIX",
         "creator": "The RealAldaren",
         "status": "approved",
-        "reason": "LDM + 2.2 bugfix",
         "tags": [
           "LDM",
           "Bugfix"
@@ -148,7 +143,6 @@
         "name": "The Golden LDM HEX",
         "creator": "swiborg",
         "status": "approved",
-        "reason": "LDM",
         "tags": [
           "LDM"
         ]
@@ -158,7 +152,6 @@
         "name": "The Golden LDM",
         "creator": "AVALANCHA121",
         "status": "approved",
-        "reason": "LDM",
         "tags": [
           "LDM"
         ]
@@ -216,10 +209,10 @@
         "name": "SWI LDM STA",
         "creator": "TheRealJevan",
         "status": "approved",
-        "reason": "LDM + 2.2 bugfix",
         "tags": [
           "LDM",
-          "Bugfix"
+          "Bugfix",
+          "StartPos"
         ]
       },
       {
@@ -227,10 +220,8 @@
         "name": "SWI LDM",
         "creator": "Dosh7t",
         "status": "approved",
-        "reason": "LDM - No 2.2 bugfix",
         "tags": [
-          "LDM",
-          "Bugfix"
+          "LDM"
         ]
       }
     ]
@@ -251,7 +242,6 @@
         "name": "Trueffet LDM mine",
         "creator": "zZoink",
         "status": "approved",
-        "reason": "LDM",
         "tags": [
           "LDM"
         ]
@@ -286,9 +276,9 @@
         "name": "Hard Machine LDM sta",
         "creator": "BooKnQuiL",
         "status": "approved",
-        "reason": "LDM",
         "tags": [
-          "LDM"
+          "LDM",
+          "StartPos"
         ]
       }
     ]
@@ -417,7 +407,6 @@
         "name": "LIMBO ULDM 2p2 fix",
         "creator": "Kolib24",
         "status": "approved",
-        "reason": "LDM + 2.2 bugfix",
         "tags": [
           "LDM",
           "Bugfix"
@@ -428,10 +417,8 @@
         "name": "LIMBO LDM",
         "creator": "Pointercrate",
         "status": "approved",
-        "reason": "LDM - No 2.2 bugfix",
         "tags": [
-          "LDM",
-          "Bugfix"
+          "LDM"
         ]
       }
     ]
@@ -465,7 +452,8 @@
         "creator": "Serpentical",
         "status": "approved",
         "tags": [
-          "LDM"
+          "LDM",
+          "StartPos"
         ]
       }
     ]
@@ -811,9 +799,9 @@
         "name": "DOC2 StartPos ldm",
         "creator": "painguyn",
         "status": "approved",
-        "reason": "LDM",
         "tags": [
-          "LDM"
+          "LDM",
+          "StartPos"
         ]
       }
     ]
@@ -876,7 +864,6 @@
         "name": "BPATA MPAKA ldm",
         "creator": "realvinnyboygd",
         "status": "approved",
-        "reason": "LDM",
         "tags": [
           "LDM"
         ]
@@ -933,9 +920,9 @@
         "name": "Judgement Knights sp",
         "creator": "PaltaDash",
         "status": "approved",
-        "reason": "LDM",
         "tags": [
-          "LDM"
+          "LDM",
+          "StartPos"
         ]
       },
       {
@@ -945,7 +932,8 @@
         "status": "approved",
         "reason": "PaltaDash LDM with a few removed details",
         "tags": [
-          "LDM"
+          "LDM",
+          "StartPos"
         ]
       }
     ]
@@ -1004,7 +992,8 @@
         "status": "rejected",
         "reason": "Removes excessive detail in predrop, removes 10% flash, removes \"ASCENT\" text at 22%, removes screen obstruction at 30%, removes excessive detail from 50-54",
         "tags": [
-          "LDM"
+          "LDM",
+          "StartPos"
         ]
       }
     ]
@@ -1033,7 +1022,8 @@
         "status": "approved",
         "reason": "Automatically enables in-level LDM",
         "tags": [
-          "LDM"
+          "LDM",
+          "StartPos"
         ]
       }
     ]
@@ -1078,7 +1068,6 @@
         "name": "Subterminal PointLDM",
         "creator": "Pointercrate",
         "status": "approved",
-        "reason": "LDM",
         "tags": [
           "LDM"
         ]
@@ -1088,7 +1077,6 @@
         "name": "Subterminal Point LD",
         "creator": "voicechatping",
         "status": "approved",
-        "reason": "LDM",
         "tags": [
           "LDM"
         ]
@@ -1117,7 +1105,6 @@
         "name": "andromeda ldm",
         "creator": "Serpentical",
         "status": "approved",
-        "reason": "LDM",
         "tags": [
           "LDM"
         ]
