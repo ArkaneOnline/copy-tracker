@@ -405,9 +405,23 @@ document.getElementById('copyForm').addEventListener('submit', (e) => {
         markUnsaved();
     }
     
+    // Save current page before refreshing
+    const savedPage = currentPage;
+    
     // Refresh filtered levels and display
     const searchInput = document.getElementById('searchInput');
     searchLevels(searchInput ? searchInput.value : '');
+    
+    // Restore page if still valid
+    const totalPages = Math.ceil(filteredLevels.length / itemsPerPage);
+    if (savedPage <= totalPages && savedPage > 0) {
+        currentPage = savedPage;
+    } else if (totalPages > 0) {
+        currentPage = totalPages; // Go to last page if saved page is out of bounds
+    }
+    displayLevels();
+    updateResultsCount(filteredLevels.length);
+    updatePagination();
     
     // Store editingLevelIndex before closing modal (since closeCopyModal clears editingCopyParentIndex)
     const wasEditingLevel = editingLevelIndex !== null;
