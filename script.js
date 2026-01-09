@@ -63,7 +63,14 @@ function createLevelCard(level) {
     const rejectedCount = level.copies.filter(c => c.status === 'rejected').length;
     const totalCopies = level.copies.length;
     
-    const copiesList = level.copies.map(copy => {
+    // Sort copies so approved ones appear first
+    const sortedCopies = [...level.copies].sort((a, b) => {
+        if (a.status === 'approved' && b.status !== 'approved') return -1;
+        if (a.status !== 'approved' && b.status === 'approved') return 1;
+        return 0; // Keep original order for non-approved copies
+    });
+    
+    const copiesList = sortedCopies.map(copy => {
         const statusClass = `copy-status-${copy.status}`;
         const statusIcon = copy.status === 'approved' ? '✓' : copy.status === 'pending' ? '⏳' : '✗';
         const copyName = copy.name ? escapeHtml(copy.name) : 'Unnamed Copy';
@@ -78,7 +85,7 @@ function createLevelCard(level) {
         ` : '';
         
         return `
-            <div class="copy-item ${tooltipClass}" ${tooltipAttr}>
+            <div class="copy-item ${tooltipClass}" ${tooltipAttr} data-copy-id="${escapeHtmlAttr(copy.id.toString())}">
                 <div class="copy-info">
                     <div class="copy-name">${copyName}</div>
                     <div class="copy-meta">
@@ -295,6 +302,60 @@ function updatePagination() {
     });
 }
 
+// Copy ID to clipboard and show notification
+function copyIdToClipboard(id) {
+    navigator.clipboard.writeText(id).then(() => {
+        showNotification(`Copied ID: ${id}`);
+    }).catch(err => {
+        console.error('Failed to copy ID:', err);
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = id;
+        textArea.style.position = 'fixed';
+        textArea.style.opacity = '0';
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+            document.execCommand('copy');
+            showNotification(`Copied ID: ${id}`);
+        } catch (err) {
+            console.error('Fallback copy failed:', err);
+        }
+        document.body.removeChild(textArea);
+    });
+}
+
+// Show notification toast
+function showNotification(message) {
+    // Remove existing notification if any
+    const existingNotification = document.getElementById('copyNotification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+    
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.id = 'copyNotification';
+    notification.className = 'copy-notification';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    
+    // Trigger animation
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 10);
+    
+    // Remove after animation
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 300);
+    }, 2000);
+}
+
 // Scroll detection for pagination animation
 let scrollTimeout;
 
@@ -374,27 +435,42 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial check after page loads
     setTimeout(() => handleScroll(), 300);
     
-    // Handle tooltip clicks on mobile (for touch devices)
+    // Handle copy item clicks (copy ID to clipboard)
     document.addEventListener('click', (e) => {
-        const tooltipElement = e.target.closest('.copy-item.has-tooltip');
-        if (tooltipElement) {
-            // Check if we're on a touch device
-            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-            if (isTouchDevice) {
-                e.preventDefault();
-                e.stopPropagation();
+        const copyItem = e.target.closest('.copy-item');
+        if (copyItem) {
+            const copyId = copyItem.getAttribute('data-copy-id');
+            if (copyId) {
+                // Check if we're clicking on a tooltip element on mobile
+                const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+                const hasTooltip = copyItem.classList.contains('has-tooltip');
                 
-                // Toggle tooltip visibility
-                const isActive = tooltipElement.classList.contains('tooltip-active');
+                if (hasTooltip && isTouchDevice) {
+                    // On mobile with tooltip, check if tooltip is active
+                    const isTooltipActive = copyItem.classList.contains('tooltip-active');
+                    if (!isTooltipActive) {
+                        // First click: show tooltip
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        // Close all other tooltips
+                        document.querySelectorAll('.copy-item.has-tooltip').forEach(el => {
+                            el.classList.remove('tooltip-active');
+                        });
+                        
+                        // Toggle current tooltip
+                        copyItem.classList.add('tooltip-active');
+                        return;
+                    }
+                    // If tooltip is already active, proceed to copy
+                }
                 
-                // Close all other tooltips
-                document.querySelectorAll('.copy-item.has-tooltip').forEach(el => {
-                    el.classList.remove('tooltip-active');
-                });
+                // Copy ID to clipboard
+                copyIdToClipboard(copyId);
                 
-                // Toggle current tooltip
-                if (!isActive) {
-                    tooltipElement.classList.add('tooltip-active');
+                // Close tooltip if it was open
+                if (hasTooltip) {
+                    copyItem.classList.remove('tooltip-active');
                 }
             }
         } else {
