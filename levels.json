@@ -314,7 +314,17 @@
     "id": 74391640,
     "name": "Keres",
     "creator": "ItsHybrid",
-    "copies": []
+    "copies": [
+      {
+        "id": 74500251,
+        "name": "Keres LDM",
+        "creator": "SebasLopezGD",
+        "status": "approved",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 75206202,
