@@ -52,6 +52,17 @@
         "tags": [
           "LDM"
         ]
+      },
+      {
+        "id": 88831280,
+        "name": "Crimson Planet SP",
+        "creator": "PositionSwitch",
+        "status": "rejected",
+        "reason": "Automatically applies an overly strong LDM",
+        "tags": [
+          "LDM",
+          "StartPos"
+        ]
       }
     ]
   },
@@ -71,8 +82,10 @@
         "name": "Zodiac LDM",
         "creator": "Pointercrate",
         "status": "approved",
+        "reason": "Fixes an extra 2.2 slope bug.",
         "tags": [
-          "LDM"
+          "LDM",
+          "Bugfix"
         ]
       },
       {
@@ -83,6 +96,17 @@
         "tags": [
           "LDM",
           "Bugfix"
+        ]
+      },
+      {
+        "id": 102602507,
+        "name": "Zodiac LDM fix SP",
+        "creator": "Dogboi320",
+        "status": "approved",
+        "tags": [
+          "LDM",
+          "Bugfix",
+          "StartPos"
         ]
       }
     ]
@@ -189,7 +213,18 @@
     "id": 63996127,
     "name": "Cold Sweat",
     "creator": "para",
-    "copies": []
+    "copies": [
+      {
+        "id": 69927693,
+        "name": "Cold Sweat LDM",
+        "creator": "Aniiuu",
+        "status": "rejected",
+        "reason": "Wave is significantly easier with next to no visual effects.",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 65588448,
@@ -370,7 +405,7 @@
   },
   {
     "id": 79771070,
-    "name": "Aeiral Gleam",
+    "name": "Aerial Gleam",
     "creator": "Endlevel",
     "copies": []
   },
@@ -511,7 +546,17 @@
     "id": 88203501,
     "name": "UNKNOWN",
     "creator": "NineDice",
-    "copies": []
+    "copies": [
+      {
+        "id": 89504490,
+        "name": "UNKNOWN LDM",
+        "creator": "AkashicRecords",
+        "status": "approved",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 88233955,
@@ -541,6 +586,7 @@
     "id": 89187968,
     "name": "Edge of Destiny",
     "creator": "CDMusic",
+    "description": "Use the in-level LDM/ULDM.",
     "copies": []
   },
   {
@@ -1075,6 +1121,12 @@
     "id": 112586799,
     "name": "Indivine",
     "creator": "MercuryDT",
+    "copies": []
+  },
+  {
+    "id": 113045735,
+    "name": "The Salt Factory",
+    "creator": "NiCkNaMe09",
     "copies": []
   },
   {
