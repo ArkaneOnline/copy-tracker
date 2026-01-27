@@ -708,7 +708,18 @@
     "name": "Edge of Destiny",
     "creator": "CDMusic",
     "description": "Use the in-level LDM/ULDM.",
-    "copies": []
+    "copies": [
+      {
+        "id": 90940495,
+        "name": "Edge of Destiny LDM",
+        "creator": "Pointercrate",
+        "status": "approved",
+        "reason": "Improves level load time by forcing the in-level ULDM to be enabled. Has no extra optimizations.",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 89414220,
