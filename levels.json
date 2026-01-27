@@ -132,7 +132,18 @@
     "id": 57600307,
     "name": "Cognition",
     "creator": "Endlevel",
-    "copies": []
+    "copies": [
+      {
+        "id": 90940544,
+        "name": "Cognition LDM",
+        "creator": "Pointercrate",
+        "status": "rejected",
+        "reason": "Outdated LDM; too heavy for current standards and unfixed for 2.2.",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 58161496,
