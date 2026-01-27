@@ -20,6 +20,18 @@
           "Bugfix",
           "StartPos"
         ]
+      },
+      {
+        "id": 132238365,
+        "name": "SH Optimized SP fix",
+        "creator": "foodynooby",
+        "status": "approved",
+        "reason": "2.2 fixed & startpos copy of Doggie/Icedcave's official Slaughterhouse alternative, optimizing decoration.",
+        "tags": [
+          "LDM",
+          "Bugfix",
+          "StartPos"
+        ]
       }
     ]
   },
@@ -73,6 +85,15 @@
         "tags": [
           "LDM",
           "StartPos"
+        ]
+      },
+      {
+        "id": 87428329,
+        "name": "Crimson Planet LDM",
+        "creator": "Pointercrate",
+        "status": "approved",
+        "tags": [
+          "LDM"
         ]
       }
     ]
@@ -187,13 +208,35 @@
     "id": 58355141,
     "name": "Calculator Core",
     "creator": "Walroose",
-    "copies": []
+    "copies": [
+      {
+        "id": 68990522,
+        "name": "Calculator Core LDM",
+        "creator": "Pointercrate",
+        "status": "rejected",
+        "reason": "Extremely outdated LDM; removes a significant amount of the level's decoration.",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 58673581,
     "name": "Kenos",
     "creator": "npesta",
-    "copies": []
+    "copies": [
+      {
+        "id": 98616929,
+        "name": "Kenos LDM",
+        "creator": "Pointercrate",
+        "status": "rejected",
+        "reason": "Old LDM; the predrop and Spectex's part have significant amounts of the level's decoration removed.",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 59075347,
@@ -276,7 +319,17 @@
     "id": 69333212,
     "name": "Promethean",
     "creator": "Endlevel",
-    "copies": []
+    "copies": [
+      {
+        "id": 90940529,
+        "name": "Promethean LDM",
+        "creator": "Pointercrate",
+        "status": "approved",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 69685815,
@@ -310,7 +363,18 @@
     "id": 71025973,
     "name": "Oblivion",
     "creator": "dice88",
-    "copies": []
+    "copies": [
+      {
+        "id": 84119250,
+        "name": "Oblivion LDM",
+        "creator": "Pointercrate",
+        "status": "pending",
+        "reason": "Does not yet contain 2.2 fixes and is currently impossible.",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 71434979,
@@ -453,7 +517,17 @@
     "id": 79771070,
     "name": "Aerial Gleam",
     "creator": "Endlevel",
-    "copies": []
+    "copies": [
+      {
+        "id": 85648041,
+        "name": "Aerial Gleam LDM",
+        "creator": "Pointercrate",
+        "status": "approved",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 80178903,
