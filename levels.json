@@ -16,6 +16,7 @@
         "name": "slh delay startpos",
         "creator": "bbeggo",
         "status": "approved",
+        "reason": "LDM/startpos copy of Slaughterhouse",
         "tags": [
           "LDM",
           "Bugfix",
@@ -32,6 +33,16 @@
           "LDM",
           "Bugfix",
           "StartPos"
+        ]
+      },
+      {
+        "id": 76489594,
+        "name": "Slaughterhouse LDM",
+        "creator": "Pointercrate",
+        "status": "pending",
+        "reason": "Does not have the 2.2 fixes. Needs reviewing",
+        "tags": [
+          "LDM"
         ]
       }
     ]
@@ -82,7 +93,7 @@
         "name": "Crimson Planet SP ol",
         "creator": "PositionSwitch",
         "status": "rejected",
-        "reason": "Old one that applied a really heavy LDM that is rejectable nowadays. Kept for perservation sake.",
+        "reason": "Outdated copy that applies a really heavy LDM that is no longer acceptable. Kept for preservation's sake.",
         "tags": [
           "LDM",
           "StartPos"
@@ -126,6 +137,7 @@
         "name": "Zodiac ldm",
         "creator": "CaveMelv",
         "status": "approved",
+        "reason": "Nearly identical to the Pointercrate LDM.",
         "tags": [
           "LDM",
           "Bugfix"
@@ -187,7 +199,7 @@
         "id": 69223483,
         "name": "Renevant ldm",
         "creator": "Spaceuk",
-        "status": "approved",
+        "status": "pending",
         "reason": "Does not have the 2.2 bugfix.",
         "tags": [
           "LDM"
@@ -232,7 +244,7 @@
         "name": "Kenos LDM",
         "creator": "Pointercrate",
         "status": "rejected",
-        "reason": "Old LDM; the predrop and Spectex's part have significant amounts of the level's decoration removed.",
+        "reason": "Outdated LDM; the predrop and Spectex's part have significant amounts of the level's decoration removed.",
         "tags": [
           "LDM"
         ]
@@ -342,6 +354,7 @@
         "name": "SWI LDM STA",
         "creator": "TheRealJevan",
         "status": "approved",
+        "reason": "2.2 fixed version of the Pointercrate LDM.",
         "tags": [
           "LDM",
           "Bugfix",
@@ -555,7 +568,18 @@
     "id": 81011195,
     "name": "walter white",
     "creator": "Renn241",
-    "copies": []
+    "copies": [
+      {
+        "id": 84679212,
+        "name": "walter white LDM",
+        "creator": "Pointercrate",
+        "status": "pending",
+        "reason": "Needs reviewing",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 81139702,
@@ -775,7 +799,7 @@
         "name": "Solar Flare LDM",
         "creator": "zZoink",
         "status": "approved",
-        "reason": "LDM - Backgrounds do not appear from some positions",
+        "reason": "Backgrounds do not appear from some start positions.",
         "tags": [
           "LDM"
         ]
@@ -1162,6 +1186,7 @@
         "name": "Judgement Knights sp",
         "creator": "PaltaDash",
         "status": "approved",
+        "reason": "LDM",
         "tags": [
           "LDM",
           "StartPos"
@@ -1172,7 +1197,7 @@
         "name": "Judgement Knights pa",
         "creator": "peetoo",
         "status": "approved",
-        "reason": "PaltaDash LDM with a few removed details",
+        "reason": "PaltaDash LDM with a few removed details.",
         "tags": [
           "LDM",
           "StartPos"
@@ -1216,6 +1241,7 @@
     "id": 112046512,
     "name": "Ascent",
     "creator": "Rimexon",
+    "description": "this level really needs an LDM",
     "copies": [
       {
         "id": 113710546,
@@ -1232,7 +1258,7 @@
         "name": "ascent SP uldm",
         "creator": "geisis",
         "status": "rejected",
-        "reason": "Removes excessive detail in predrop, removes 10% flash, removes \"ASCENT\" text at 22%, removes screen obstruction at 30%, removes excessive detail from 50-54",
+        "reason": "Removes excessive detail in predrop, removes 10% flash, removes \"ASCENT\" text at 22%, removes screen obstruction at 30%, removes excessive detail from 50-54.",
         "tags": [
           "LDM",
           "StartPos"
@@ -1262,7 +1288,7 @@
         "name": "Anathema start pos",
         "creator": "Mariner",
         "status": "approved",
-        "reason": "Automatically enables in-level LDM",
+        "reason": "Automatically enables in-level LDM.",
         "tags": [
           "LDM",
           "StartPos"
@@ -1380,6 +1406,12 @@
     ]
   },
   {
+    "id": 114340057,
+    "name": "Axiom Asterism",
+    "creator": "Filqh",
+    "copies": []
+  },
+  {
     "id": 114530859,
     "name": "Starlight Summit",
     "creator": "hazelmrow",
@@ -1413,6 +1445,12 @@
     "id": 116174063,
     "name": "Every End",
     "creator": "MindCap",
+    "copies": []
+  },
+  {
+    "id": 117692518,
+    "name": "Quanteuse processing",
+    "creator": "Renn241",
     "copies": []
   },
   {
@@ -1534,7 +1572,7 @@
   },
   {
     "id": 128093374,
-    "name": "Waveterminal",
+    "name": "Wavterminal",
     "creator": "Skyavoxii",
     "copies": []
   },
