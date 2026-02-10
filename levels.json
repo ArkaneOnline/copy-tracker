@@ -176,6 +176,18 @@
         "tags": [
           "LDM"
         ]
+      },
+      {
+        "id": 129497624,
+        "name": "Cognition LDM Fix",
+        "creator": "Lyaguxx",
+        "status": "rejected",
+        "reason": "Far too heavy of an LDM for our current 2.2 standards.",
+        "tags": [
+          "LDM",
+          "Bugfix",
+          "StartPos"
+        ]
       }
     ]
   },
