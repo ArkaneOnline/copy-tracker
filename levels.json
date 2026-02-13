@@ -1117,7 +1117,19 @@
     "id": 108708033,
     "name": "Coalescence",
     "creator": "Amplitron",
-    "copies": []
+    "copies": [
+      {
+        "id": 133314352,
+        "name": "Coalescence LDM",
+        "creator": "TEGREF",
+        "status": "approved",
+        "reason": "LDM with sp for Coalescence",
+        "tags": [
+          "LDM",
+          "StartPos"
+        ]
+      }
+    ]
   },
   {
     "id": 109439644,
