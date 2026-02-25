@@ -676,7 +676,19 @@
     "id": 87071894,
     "name": "The Paroxysm of Rage",
     "creator": "Zacanaii",
-    "copies": []
+    "copies": [
+      {
+        "id": 106770367,
+        "name": "TPoR sp",
+        "creator": "zKopre",
+        "status": "approved",
+        "reason": "Fixes a 2.2 bug at 32%.",
+        "tags": [
+          "Bugfix",
+          "StartPos"
+        ]
+      }
+    ]
   },
   {
     "id": 87130877,
