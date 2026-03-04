@@ -534,7 +534,19 @@
     "id": 76543324,
     "name": "Verdant Landscape",
     "creator": "Nisha",
-    "copies": []
+    "copies": [
+      {
+        "id": 113314135,
+        "name": "Verdant Landscape SP",
+        "creator": "rnexel",
+        "status": "approved",
+        "reason": "sp and fixed",
+        "tags": [
+          "Bugfix",
+          "StartPos"
+        ]
+      }
+    ]
   },
   {
     "id": 76962930,
