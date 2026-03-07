@@ -1429,7 +1429,18 @@
     "id": 114281093,
     "name": "CHIL",
     "creator": "McCoco",
-    "copies": []
+    "copies": [
+      {
+        "id": 134986702,
+        "name": "Chil LDM SP",
+        "creator": "fapupshire",
+        "status": "approved",
+        "tags": [
+          "LDM",
+          "StartPos"
+        ]
+      }
+    ]
   },
   {
     "id": 114283297,
