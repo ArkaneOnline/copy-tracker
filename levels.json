@@ -809,6 +809,16 @@
         "tags": [
           "LDM"
         ]
+      },
+      {
+        "id": 135091730,
+        "name": "Avernus LDM SP",
+        "creator": "zLaban",
+        "status": "approved",
+        "tags": [
+          "LDM",
+          "StartPos"
+        ]
       }
     ]
   },
