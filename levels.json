@@ -457,7 +457,17 @@
     "id": 73667628,
     "name": "Acheron",
     "creator": "ryamu",
-    "copies": []
+    "copies": [
+      {
+        "id": 110301926,
+        "name": "Acheron SP",
+        "creator": "Serpentical",
+        "status": "approved",
+        "tags": [
+          "StartPos"
+        ]
+      }
+    ]
   },
   {
     "id": 74391640,
@@ -950,7 +960,17 @@
     "id": 94359172,
     "name": "COMBUSTION",
     "creator": "Cersia",
-    "copies": []
+    "copies": [
+      {
+        "id": 124246933,
+        "name": "Combustion Startpos",
+        "creator": "Nayloren",
+        "status": "approved",
+        "tags": [
+          "StartPos"
+        ]
+      }
+    ]
   },
   {
     "id": 94578424,
@@ -1139,7 +1159,17 @@
     "id": 107741051,
     "name": "Natural Disaster",
     "creator": "⁨iIiLaSeRiIi",
-    "copies": []
+    "copies": [
+      {
+        "id": 107783323,
+        "name": "Natural Disaster SP",
+        "creator": "PaltaDash",
+        "status": "approved",
+        "tags": [
+          "StartPos"
+        ]
+      }
+    ]
   },
   {
     "id": 107805281,
