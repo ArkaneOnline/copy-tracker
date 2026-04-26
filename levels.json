@@ -508,6 +508,17 @@
         "tags": [
           "LDM"
         ]
+      },
+      {
+        "id": 136925827,
+        "name": "Firework fix",
+        "creator": "rnexel",
+        "status": "approved",
+        "reason": "Hyperlith's fix, with an additional orb layering fix for the 40% green orb. Also uses 2.1%.",
+        "tags": [
+          "Bugfix",
+          "StartPos"
+        ]
       }
     ]
   },
@@ -1549,7 +1560,29 @@
     "id": 116174063,
     "name": "Every End",
     "creator": "MindCap",
-    "copies": []
+    "copies": [
+      {
+        "id": 139093468,
+        "name": "Every End Optimized",
+        "creator": "foodynooby",
+        "status": "approved",
+        "reason": "Fixed & acceptable version of PzKpfw4's optimized copy. Assets have been optimized using NoTouch and other 2.2 features.",
+        "tags": [
+          "LDM",
+          "StartPos"
+        ]
+      },
+      {
+        "id": 121861583,
+        "name": "Every End Optimized",
+        "creator": "PzKpfw4",
+        "status": "rejected",
+        "reason": "In-level LDM removes the second background object layers. Also has random flipped ground spikes throughout 90-94%.",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 117692518,
