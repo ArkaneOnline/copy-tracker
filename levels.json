@@ -847,7 +847,18 @@
     "id": 90057148,
     "name": "Terminal Rampancy",
     "creator": "Xyriak",
-    "copies": []
+    "copies": [
+      {
+        "id": 135401221,
+        "name": "TermRamp Fix SP LDM",
+        "creator": "veryBizzare",
+        "status": "rejected",
+        "reason": "Removes a significant amount of the level's decoration.",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 90104288,
