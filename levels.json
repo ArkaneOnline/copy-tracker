@@ -653,7 +653,30 @@
     "id": 85133223,
     "name": "poocubed",
     "creator": "Liisp",
-    "copies": []
+    "copies": [
+      {
+        "id": 106715922,
+        "name": "poocubed fix",
+        "creator": "NiCkNaMe09",
+        "status": "approved",
+        "reason": "Fixes 2.2 bugs at 62% where a black orb timing was unintentionally made frame perfect, as well as a size portal placement bug at 32%.",
+        "tags": [
+          "Bugfix",
+          "StartPos"
+        ]
+      },
+      {
+        "id": 114307594,
+        "name": "poocubed fix startpo",
+        "creator": "PaulaGPe",
+        "status": "approved",
+        "reason": "Same as NiCkNaMe09's fix with different startpositions.",
+        "tags": [
+          "Bugfix",
+          "StartPos"
+        ]
+      }
+    ]
   },
   {
     "id": 86018142,
