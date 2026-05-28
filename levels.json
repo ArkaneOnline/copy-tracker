@@ -1717,7 +1717,29 @@
     "id": 126571887,
     "name": "Loops of Fury",
     "creator": "Enfur",
-    "copies": []
+    "copies": [
+      {
+        "id": 141198190,
+        "name": "Loops of Fury ULDM",
+        "creator": "foodynooby",
+        "status": "approved",
+        "reason": "LennyFeus' ULDM, with slight additions to the 4% swing to make it acceptable.",
+        "tags": [
+          "LDM",
+          "StartPos"
+        ]
+      },
+      {
+        "id": 141182778,
+        "name": "lof SP ULDM",
+        "creator": "LennyFeusREAL",
+        "status": "rejected",
+        "reason": "Removes too many details in the 4% swing.",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 127023313,
