@@ -415,6 +415,18 @@
         "tags": [
           "LDM"
         ]
+      },
+      {
+        "id": 108156360,
+        "name": "Trueffet LDM Fix",
+        "creator": "ICTcat",
+        "status": "approved",
+        "reason": "zoink ldm with the 87% bug fixed",
+        "tags": [
+          "LDM",
+          "Bugfix",
+          "StartPos"
+        ]
       }
     ]
   },
