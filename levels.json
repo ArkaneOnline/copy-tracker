@@ -287,7 +287,8 @@
         "id": 73229842,
         "name": "The Golden LDM",
         "creator": "AVALANCHA121",
-        "status": "approved",
+        "status": "rejected",
+        "reason": "Rejected (07/19/26) for removing certain glow objects which impact the level's visibility.",
         "tags": [
           "LDM"
         ]
@@ -1374,7 +1375,16 @@
         "name": "Waterfall ldm",
         "creator": "BBGameGuru",
         "status": "approved",
-        "reason": "Same as the \"sparkyconjure\" ldm, but with 14% to 23% optimized.",
+        "reason": "Same as the sparkyconjure LDM, but with 14% to 23% optimized.",
+        "tags": [
+          "LDM"
+        ]
+      },
+      {
+        "id": 136612782,
+        "name": "Waterfall ldm sp",
+        "creator": "FedkaIMedka",
+        "status": "approved",
         "tags": [
           "LDM"
         ]
