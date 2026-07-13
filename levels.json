@@ -111,6 +111,18 @@
     ]
   },
   {
+    "id": 48991380,
+    "name": "Maniacal Chains",
+    "creator": "LordDivinity",
+    "copies": []
+  },
+  {
+    "id": 49072489,
+    "name": "Through The Gates",
+    "creator": "TeamTheDashers",
+    "copies": []
+  },
+  {
     "id": 49896559,
     "name": "Abyss of Darkness",
     "creator": "Exen",
@@ -302,6 +314,12 @@
     "copies": []
   },
   {
+    "id": 62912799,
+    "name": "Ashley Wave Trials",
+    "creator": "OddMod",
+    "copies": []
+  },
+  {
     "id": 63996127,
     "name": "Cold Sweat",
     "creator": "para",
@@ -465,6 +483,12 @@
         ]
       }
     ]
+  },
+  {
+    "id": 73214186,
+    "name": "Diabolic ClubStep",
+    "creator": "Sevant",
+    "copies": []
   },
   {
     "id": 73667628,
@@ -660,6 +684,12 @@
     "id": 82544060,
     "name": "Mayhem",
     "creator": "LordVadercraft",
+    "copies": []
+  },
+  {
+    "id": 83244159,
+    "name": "Stellar Night",
+    "creator": "IcEDCave",
     "copies": []
   },
   {
@@ -1141,6 +1171,12 @@
     "copies": []
   },
   {
+    "id": 97086864,
+    "name": "Levigo",
+    "creator": "Swib",
+    "copies": []
+  },
+  {
     "id": 97364686,
     "name": "Lithium",
     "creator": "L4tezk",
@@ -1159,6 +1195,12 @@
     "copies": []
   },
   {
+    "id": 99703915,
+    "name": "Fracture",
+    "creator": "Arrowgazi",
+    "copies": []
+  },
+  {
     "id": 100990392,
     "name": "VOID",
     "creator": "nikoberry",
@@ -1168,6 +1210,12 @@
     "id": 103925676,
     "name": "PSYCHOPATH",
     "creator": "DeniPol",
+    "copies": []
+  },
+  {
+    "id": 104232191,
+    "name": "The Catacombs",
+    "creator": "Cersia",
     "copies": []
   },
   {
@@ -1317,6 +1365,12 @@
     "id": 110500920,
     "name": "The Yangire",
     "creator": "Dorami",
+    "copies": []
+  },
+  {
+    "id": 110534288,
+    "name": "Based After Based",
+    "creator": "Akunakunn",
     "copies": []
   },
   {
@@ -1611,6 +1665,12 @@
     "copies": []
   },
   {
+    "id": 115077305,
+    "name": "NOMAD",
+    "creator": "ReeseVT",
+    "copies": []
+  },
+  {
     "id": 115151904,
     "name": "ta1LSD0ll",
     "creator": "ta1lsdoll⁩",
@@ -1716,6 +1776,12 @@
     ]
   },
   {
+    "id": 122196131,
+    "name": "ROCKBOTTOM",
+    "creator": "bims",
+    "copies": []
+  },
+  {
     "id": 122389640,
     "name": "in this",
     "creator": "enci",
@@ -1734,9 +1800,21 @@
     "copies": []
   },
   {
+    "id": 125317359,
+    "name": "BRITNEY NO SCLEARS",
+    "creator": "wabas",
+    "copies": []
+  },
+  {
     "id": 125617849,
     "name": "Dark Dimension",
     "creator": "ThePurgatory",
+    "copies": []
+  },
+  {
+    "id": 125788781,
+    "name": "TrakineS",
+    "creator": "Laranjoo",
     "copies": []
   },
   {
@@ -1790,6 +1868,12 @@
     ]
   },
   {
+    "id": 127323087,
+    "name": "Society",
+    "creator": "Neomarbilan",
+    "copies": []
+  },
+  {
     "id": 127997391,
     "name": "Subsuming Vortex",
     "creator": "Cursed",
@@ -1808,9 +1892,100 @@
     "copies": []
   },
   {
+    "id": 129235528,
+    "name": "DreamStep",
+    "creator": "Blaster1337",
+    "copies": []
+  },
+  {
     "id": 130183035,
     "name": "Goober Rage Stage",
     "creator": "bonscarrot",
+    "copies": []
+  },
+  {
+    "id": 130327668,
+    "name": "BEING HOME",
+    "creator": "Turtl123",
+    "description": "ohio",
+    "copies": []
+  },
+  {
+    "id": 130464801,
+    "name": "Dualist",
+    "creator": "SyncTM",
+    "copies": []
+  },
+  {
+    "id": 131497860,
+    "name": "CHROMACAVE",
+    "creator": "HappyMoby",
+    "copies": []
+  },
+  {
+    "id": 131599104,
+    "name": "Voltage",
+    "creator": "ThePurgatory",
+    "copies": []
+  },
+  {
+    "id": 133175713,
+    "name": "ORBIT",
+    "creator": "MindCap",
+    "copies": []
+  },
+  {
+    "id": 134541844,
+    "name": "zorin",
+    "creator": "SnowEye",
+    "copies": []
+  },
+  {
+    "id": 134942736,
+    "name": "Penumbral",
+    "creator": "cherryteam",
+    "copies": []
+  },
+  {
+    "id": 136135870,
+    "name": "Trickshot",
+    "creator": "vonic",
+    "copies": []
+  },
+  {
+    "id": 136396693,
+    "name": "Master of Puppets",
+    "creator": "TheZinkYT",
+    "copies": []
+  },
+  {
+    "id": 136981369,
+    "name": "Calibrate",
+    "creator": "Bamvie",
+    "copies": []
+  },
+  {
+    "id": 137586316,
+    "name": "Silent Lunch",
+    "creator": "DreamTide",
+    "copies": []
+  },
+  {
+    "id": 137757402,
+    "name": "Between Duality",
+    "creator": "rnexel",
+    "copies": []
+  },
+  {
+    "id": 138781722,
+    "name": "KILLSTEALER",
+    "creator": "Rynoxiouss",
+    "copies": []
+  },
+  {
+    "id": 139508889,
+    "name": "Losing Your Mind",
+    "creator": "GDgalaxygaming",
     "copies": []
   }
 ]
