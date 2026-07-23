@@ -603,6 +603,15 @@
           "Bugfix",
           "StartPos"
         ]
+      },
+      {
+        "id": 77005822,
+        "name": "Verdant Landscape ld",
+        "creator": "Diris",
+        "status": "approved",
+        "tags": [
+          "LDM"
+        ]
       }
     ]
   },
@@ -684,7 +693,18 @@
     "id": 82544060,
     "name": "Mayhem",
     "creator": "LordVadercraft",
-    "copies": []
+    "copies": [
+      {
+        "id": 133755600,
+        "name": "Mayhem  mdm",
+        "creator": "shayisbub",
+        "status": "approved",
+        "reason": "Medium detail mode of Mayhem: more detail than the in-level LDM, but more optimized than full detail mode.",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 83244159,
