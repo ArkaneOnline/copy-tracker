@@ -738,6 +738,17 @@
           "Bugfix",
           "StartPos"
         ]
+      },
+      {
+        "id": 145285838,
+        "name": "poocubed Startpos",
+        "creator": "ChubDubs",
+        "status": "approved",
+        "reason": "Same 62% fix as NiCkNaMe09's copy, but with only 8 startpositions.",
+        "tags": [
+          "Bugfix",
+          "StartPos"
+        ]
       }
     ]
   },
@@ -1955,6 +1966,12 @@
     "copies": []
   },
   {
+    "id": 133489881,
+    "name": "Doppler",
+    "creator": "At242",
+    "copies": []
+  },
+  {
     "id": 134541844,
     "name": "zorin",
     "creator": "SnowEye",
@@ -1964,6 +1981,12 @@
     "id": 134942736,
     "name": "Penumbral",
     "creator": "cherryteam",
+    "copies": []
+  },
+  {
+    "id": 135661111,
+    "name": "The Bloop",
+    "creator": "murkkat",
     "copies": []
   },
   {
@@ -2006,6 +2029,12 @@
     "id": 139508889,
     "name": "Losing Your Mind",
     "creator": "GDgalaxygaming",
+    "copies": []
+  },
+  {
+    "id": 142896409,
+    "name": "Green Bullet",
+    "creator": "cherryteam",
     "copies": []
   }
 ]
