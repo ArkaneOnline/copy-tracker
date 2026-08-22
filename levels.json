@@ -44,6 +44,17 @@
         "tags": [
           "LDM"
         ]
+      },
+      {
+        "id": 142137437,
+        "name": "SLH hyper optimized",
+        "creator": "zyphur",
+        "status": "rejected",
+        "reason": "Although very close to being acceptable on full detail, the level marginally nerfs a sawblade at 82%.",
+        "tags": [
+          "LDM",
+          "StartPos"
+        ]
       }
     ]
   },
@@ -640,6 +651,17 @@
         "tags": [
           "LDM"
         ]
+      },
+      {
+        "id": 141966200,
+        "name": "Aerial Gleam Fix",
+        "creator": "ptyw",
+        "status": "approved",
+        "reason": "Fixes 2.2 bugs at 43% and 63%.",
+        "tags": [
+          "Bugfix",
+          "StartPos"
+        ]
       }
     ]
   },
@@ -800,7 +822,19 @@
     "id": 86407629,
     "name": "Tidal Wave",
     "creator": "OniLink",
-    "copies": []
+    "copies": [
+      {
+        "id": 9438718,
+        "name": "Tidal Wave ULDM SP",
+        "creator": "Denni",
+        "status": "rejected",
+        "reason": "Uses an outdated version of Tidal Wave.",
+        "tags": [
+          "LDM",
+          "StartPos"
+        ]
+      }
+    ]
   },
   {
     "id": 87071894,
@@ -955,6 +989,17 @@
         "status": "approved",
         "tags": [
           "LDM",
+          "StartPos"
+        ]
+      },
+      {
+        "id": 113339596,
+        "name": "Avernus 2 2 Fix",
+        "creator": "qSerVax",
+        "status": "approved",
+        "reason": "Improves various transitions to match 2.1.",
+        "tags": [
+          "Bugfix",
           "StartPos"
         ]
       }
@@ -1127,7 +1172,19 @@
     "id": 94969889,
     "name": "Belladonna",
     "creator": "cherryteam",
-    "copies": []
+    "copies": [
+      {
+        "id": 110334060,
+        "name": "Belladonna Fix SP",
+        "creator": "manuww",
+        "status": "approved",
+        "reason": "Fixes a 2.2 bug in the last spider.",
+        "tags": [
+          "Bugfix",
+          "StartPos"
+        ]
+      }
+    ]
   },
   {
     "id": 95031870,
@@ -1812,6 +1869,16 @@
         "reason": "Removes a significant amount of the level's decoration.",
         "tags": [
           "LDM"
+        ]
+      },
+      {
+        "id": 134733940,
+        "name": "Snowbound ldm 3",
+        "creator": "MrGm211",
+        "status": "approved",
+        "tags": [
+          "LDM",
+          "StartPos"
         ]
       }
     ]
