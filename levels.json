@@ -1002,6 +1002,18 @@
           "Bugfix",
           "StartPos"
         ]
+      },
+      {
+        "id": 147483716,
+        "name": "Avernus ldm fix",
+        "creator": "DarthSkril",
+        "status": "approved",
+        "reason": "Combines zLaban ldm and qSerVax bugfix",
+        "tags": [
+          "LDM",
+          "Bugfix",
+          "StartPos"
+        ]
       }
     ]
   },
